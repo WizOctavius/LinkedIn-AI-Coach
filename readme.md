@@ -40,16 +40,14 @@ Tired of generic, superficial feedback on your LinkedIn profile? Existing tools 
 
 The LinkedIn AI Coach is a next-generation platform that transforms profile optimization from a static task into an ongoing, personalized, and emotionally intelligent coaching experience. It leverages a full-stack architecture to deliver deep, real-time analysis tailored to your specific career goals and target audience. The application analyzes every part of your profile to provide holistic, actionable insights that help you build a compelling professional narrative.
 
-It is highly recommended to add 1–2 screenshots of your application here, especially the final results page.
-
 ## Key features
 
-- Real-time streaming analysis: feedback is streamed from the FastAPI backend to the React UI as it's generated, providing an interactive and engaging user experience.
-- Multi-persona targeting: optimize your profile for different audiences (Recruiters, Hiring Managers, Potential Clients) and receive tailored advice for each.
-- In-depth job match analysis: paste a job description to get a detailed breakdown of your profile's alignment, including a match score and actionable keyword suggestions to get past applicant tracking systems (ATS).
-- Advanced asynchronous backend: the Python backend uses asyncio to process multiple profile sections in parallel, with a custom stream merger to deliver results with maximum performance and efficiency.
-- Strategic dual-model AI: for critical sections like the headline, the application uses a two-step process where one AI (Cerebras) generates creative options and a second AI (Llama 3) refines them for strategic impact.
-- Polished, data-rich UI: the results dashboard features an executive summary, progress bars, persona comparison views, and collapsible sections to make the AI's insights clear and actionable.
+- Real-time streaming analysis: Feedback is streamed from the FastAPI backend to the React UI as it's generated, providing an interactive and engaging user experience.
+- Multi-persona targeting: Optimize your profile for different audiences (Recruiters, Hiring Managers, Potential Clients) and receive tailored advice for each.
+- In-depth job match analysis: Paste a job description to get a detailed breakdown of your profile's alignment, including a match score and actionable keyword suggestions to get past applicant tracking systems (ATS).
+- Advanced asynchronous backend: The Python backend uses asyncio to process multiple profile sections in parallel, with a custom stream merger to deliver results with maximum performance and efficiency.
+- Strategic dual-model AI: For critical sections like the headline, the application uses a two-step process where one AI (Cerebras) generates creative options and a second AI (Llama 3) refines them for strategic impact.
+- Polished, data-rich UI: The results dashboard features an executive summary, progress bars, persona comparison views, and collapsible sections to make the AI's insights clear and actionable.
 
 ## Architecture
 
@@ -189,4 +187,6 @@ project-root/
 
 ## Contributing
 
-This project was developed for a hackathon. While contributions are not actively sought at this time, feel free to fork the repository and explore the code. For any major bugs or issues, please open an issue.
+This project was developed for _FutureStack GenAI_ hackathon hackathon. While contributions are not actively sought at this time, feel free to fork the repository and explore the code. For any major bugs or issues, please open an issue.
+
+- Made to solve a real-world problem by **Anik Kumar Adhikary**
