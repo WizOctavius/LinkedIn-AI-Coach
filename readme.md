@@ -1,8 +1,26 @@
-# **LinkedIn AI Coach**
+# **LinkedIn Profile Analyzer** 🚀
 
 ==================
 
 _An emotionally intelligent AI partner that provides real-time, personalized feedback to elevate your professional brand and career narrative._
+
+## Screenshots
+
+### Home Page
+
+![Homepage](Screenshots/screencapture-localhost-5173-2025-10-05-20_08_01.jpg)
+
+### Target Audience Page
+
+![alt text](Screenshots/screencapture-localhost-5173-2025-10-05-20_09_26.jpg)
+
+### Every Section is Filled
+
+![alt text](<Screenshots/Screenshot 2025-10-05 131247.png>)
+
+### Analysis
+
+![alt text](Screenshots/screencapture-localhost-5173-2025-10-05-15_18_47.jpg)
 
 ## Table of contents
 
@@ -15,7 +33,6 @@ _An emotionally intelligent AI partner that provides real-time, personalized fee
 7. API Documentation
 8. Project Structure
 9. Contributing
-10. License
 
 ## Overview
 
