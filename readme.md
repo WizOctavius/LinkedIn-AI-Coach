@@ -31,8 +31,7 @@ _An emotionally intelligent AI partner that provides real-time, personalized fee
 5. Tech Stack
 6. Getting Started
 7. API Documentation
-8. Project Structure
-9. Contributing
+8. Contributing
 
 ## Overview
 
@@ -53,7 +52,28 @@ The LinkedIn AI Coach is a next-generation platform that transforms profile opti
 
 This project uses a modern, decoupled full-stack architecture. The React frontend is separate from the FastAPI backend, communicating via API calls. This ensures a clean separation of concerns and allows independent scaling and development.
 
-The application is typically hosted with the frontend deployed to a static host (for example, Vercel) and the backend deployed as a FastAPI service (for example, Render). The backend communicates with external AI APIs to generate analysis and streams results to the frontend using Server-Sent Events (SSE).
+The application can be hosted with the frontend deployed to a static host (for example, Vercel) and the backend deployed as a FastAPI service (for example, Render). The backend communicates with external AI APIs to generate analysis and streams results to the frontend using Server-Sent Events (SSE).
+
+```text
+project-root/
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── Backend/
+│   ├── main.py             # FastAPI app entrypoint, defines API routes
+│   ├── analysis.py         # Core AI analysis logic and prompting
+│   ├── services.py         # Handles external API calls to Llama/Cerebras
+│   ├── models.py           # Pydantic data models for validation
+│   ├── utils.py            # Helper functions, like the async stream merger
+│   ├── config.py           # Manages environment variables
+│   └── .env.example        # Template for environment variables
+└── frontend/
+    └── src/
+        ├── components/     # Reusable React components for each step of the UI
+        ├── App.jsx         # Main React component, manages state and steps
+        ├── main.jsx        # Entry point for the React application
+        └── index.css       # Global styles and Tailwind CSS configuration
+```
 
 ## AI pipeline
 
@@ -70,11 +90,11 @@ The application is typically hosted with the frontend deployed to a static host 
         │   ├── 💡 Step 4a: Generate 5 Creative Options
         │   │   └── 🤖 AI Model: Cerebras
         │   └── 🎯 Step 4b: Refine, Analyze, and Select Top 2 Options
-        │       └── 🤖 AI Model: Llama 3
+        │       └── 🤖 AI Model: Llama 3.3 8B Instruct (Free) 
         │
         ├── 🚀 5. Analyze Core Sections in Parallel (Rate-Limited Batches)
         │   │   # Multiple sections are analyzed at once for speed, using a custom stream merger.
-        │   ├── 📄 About Section (Llama 3)
+        │   ├── 📄 About Section (Llama 3.3 8B Instruct (Free) )
         │   ├── 📈 Experience Section (Cerebras)
         │   ├── 🎓 Education Section (Cerebras)
         │   ├── 🛠️ Skills, Projects, Certifications (Cerebras)
@@ -82,11 +102,11 @@ The application is typically hosted with the frontend deployed to a static host 
         │
         ├── 🎯 6. Conditional: Job Match Analysis (if enabled)
         │   │   # Analyzes the entire profile against provided job descriptions.
-        │   └── 🤖 AI Model: Llama 3
+        │   └── 🤖 AI Model: Llama 3.3 8B Instruct (Free) 
         │
         ├── ✨ 7. Synthesize: Generate Holistic Feedback
         │   │   # A final meta-analysis that reviews all previous feedback for a strategic overview.
-        │   └── 🤖 AI Model: Llama 3
+        │   └── 🤖 AI Model: Llama 3.3 8B Instruct (Free) 
         │
         └── 📤 8. Stream Finalized Persona Results to Frontend
             └── (Loop continues for the next persona...)
@@ -161,29 +181,6 @@ The backend exposes two main endpoints for profile analysis.
 - Description: performs the analysis and returns the complete result in a single JSON response.
 - Request body: application/json matching the LinkedInProfile Pydantic model.
 - Response: JSON matching the AnalysisResponse Pydantic model (see `Backend/models.py`).
-
-## Project structure
-
-```text
-project-root/
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── Backend/
-│   ├── main.py             # FastAPI app entrypoint, defines API routes
-│   ├── analysis.py         # Core AI analysis logic and prompting
-│   ├── services.py         # Handles external API calls to Llama/Cerebras
-│   ├── models.py           # Pydantic data models for validation
-│   ├── utils.py            # Helper functions, like the async stream merger
-│   ├── config.py           # Manages environment variables
-│   └── .env.example        # Template for environment variables
-└── frontend/
-    └── src/
-        ├── components/     # Reusable React components for each step of the UI
-        ├── App.jsx         # Main React component, manages state and steps
-        ├── main.jsx        # Entry point for the React application
-        └── index.css       # Global styles and Tailwind CSS configuration
-```
 
 ## Contributing
 
