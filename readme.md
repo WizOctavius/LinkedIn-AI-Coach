@@ -138,8 +138,9 @@ Installation and setup
 1. Clone the repository and change into the project folder:
 
     ```powershell
-    git clone [YOUR_REPOSITORY_URL]
-    cd [PROJECT_FOLDER]
+    git clone [https://github.com/WizOctavius/LinkedIn-AI-Coach]
+    cd [Backend]
+    cd [frontend]
     ```
 
 2. Backend: install dependencies and start the server
