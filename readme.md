@@ -45,7 +45,7 @@ The LinkedIn AI Coach is a next-generation platform that transforms profile opti
 - Multi-persona targeting: Optimize your profile for different audiences (Recruiters, Hiring Managers, Potential Clients) and receive tailored advice for each.
 - In-depth job match analysis: Paste a job description to get a detailed breakdown of your profile's alignment, including a match score and actionable keyword suggestions to get past applicant tracking systems (ATS).
 - Advanced asynchronous backend: The Python backend uses asyncio to process multiple profile sections in parallel, with a custom stream merger to deliver results with maximum performance and efficiency.
-- Strategic dual-model AI: For critical sections like the headline, the application uses a two-step process where one AI (Cerebras) generates creative options and a second AI (Llama 3) refines them for strategic impact.
+- Strategic dual-model AI: For critical sections like the headline, the application uses a two-step process where one AI (Cerebras) generates creative options and a second AI (Llama 3.3 8B Instruct (Free)) refines them for strategic impact.
 - Polished, data-rich UI: The results dashboard features an executive summary, progress bars, persona comparison views, and collapsible sections to make the AI's insights clear and actionable.
 
 ## Architecture
